@@ -30,8 +30,16 @@ if(isset($_FILES['user_image'])){
 					if($stmt->rowCount()){
 						echo 'File Has been uploaded sucessfully';
 					}
+				}else{
+					echo 'Ops, Something happened when upload image';	
 				}
+			}else{
+				echo 'Wrong , Image ('.$file_name.') size Too big , make sure your image size less than 2MB';	
 			}
+		}else{
+			echo 'Ops, Something happened when upload image';	
 		}
+	}else{
+		echo 'Please , choose current image file';	
 	}
 }
